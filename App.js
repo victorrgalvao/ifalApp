@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -6,8 +7,10 @@ import LoginScreen from './components/LoginScreen';
 import ListScreen from './components/ListScreen';
 import { Ionicons } from '@expo/vector-icons';
 
+
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
+
 
 const MainStack = () => {
   return (
@@ -18,12 +21,13 @@ const MainStack = () => {
   );
 };
 
+
 const App = () => {
   return (
     <NavigationContainer >
       <Tab.Navigator  >
       <Tab.Screen
-      
+     
           name="login"
           component={MainStack}
           options={{
@@ -32,9 +36,9 @@ const App = () => {
             ),headerShown:false
           }}
         />
-        
+       
       <Tab.Screen
-      
+     
           name="Listagem"
           component={ListScreen}
           options={{
@@ -50,4 +54,8 @@ const App = () => {
 };
 
 
+
+
 export default App;
+
+
