@@ -1,3 +1,5 @@
+// Array de objs que serao renderizados na list 
+
 const gruposKPop = [
   {
     id: 1,
@@ -47,7 +49,7 @@ const gruposKPop = [
     grupo: "88 RISING UP",
     imagem: "https://i.scdn.co/image/ab6761610000e5eb4299970473547f31f4816715",
   }
-  // Adicione mais grupos conforme necessário
+  //E possivel Adicionar mais grupos conforme necessário
 ];
 
 export default gruposKPop;

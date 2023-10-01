@@ -3,21 +3,21 @@ import React, { useState } from 'react';
 import { View, StyleSheet } from 'react-native';
 import { TextInput, Button } from 'react-native-paper';
 
-
+// onde sera recebido os dados do form do login
 const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
 
   const handleLogin = () => {
-    // Lógica de autenticação aqui
+    //Onde ficara a logica  de autenticação do login ficara  aqui
     navigation.navigate('Listagem',{
       loggedIn:true,
     });
    
   };
 
-
+// Tela de login a ser retornada para o app.js
   return (
     <View style={styles.container}>
       <TextInput

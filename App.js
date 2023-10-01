@@ -12,6 +12,8 @@ const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
 
+
+// Tela principal a ser chamada por parte do Navigation
 const MainStack = () => {
   return (
     <Stack.Navigator screenOptions={{headerStyle:{elevation:5}}} initialRouteName="Login">
@@ -24,6 +26,7 @@ const MainStack = () => {
 
 const App = () => {
   return (
+    // Cabeçalho onde ficaram os icones para o uso do navigation  
     <NavigationContainer >
       <Tab.Navigator  >
       <Tab.Screen
@@ -37,6 +40,8 @@ const App = () => {
           }}
         />
        
+
+       {/* Rodape onde ficaram os icones para o uso do navigation  */}
       <Tab.Screen
      
           name="Listagem"
@@ -47,7 +52,7 @@ const App = () => {
             ),headerShown:true
           }}
         />
-        {/* Adicione mais abas conforme necessário */}
+        {/* E possivel  Adicionar mais abas conforme necessário */}
       </Tab.Navigator>
     </NavigationContainer>
   );

@@ -10,7 +10,7 @@ const separatorComponent = () => {
 
 
 
-
+// Tela de listagem a ser retornada para o app.js
 const ListScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
