@@ -3,14 +3,11 @@ import { View, FlatList, StyleSheet,SafeAreaView ,Image} from 'react-native';
 import { List } from 'react-native-paper';
 import gruposKPop from '../data/gruposData'
 
-
 const separatorComponent = () => {
   return <View style={{ height: 1, backgroundColor: 'gray' }} />;
 };
 
 
-
-// Tela de listagem a ser retornada para o app.js
 const ListScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
@@ -21,7 +18,7 @@ const ListScreen = () => {
         renderItem={({ item }) => (
           <List.Item
         title={item.nome}
-       
+        
         description={item.grupo}
         left={(props) => (
           <List.Icon {...props} icon={() => <Image source={{ uri: item.imagem }} style={{ width: 60, height: 60, borderRadius: 20 }} />} />
@@ -36,7 +33,6 @@ const ListScreen = () => {
   );
 };
 
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -48,6 +44,5 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
 });
-
 
 export default ListScreen;

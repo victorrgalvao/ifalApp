@@ -1,23 +1,19 @@
-
 import React, { useState } from 'react';
 import { View, StyleSheet } from 'react-native';
 import { TextInput, Button } from 'react-native-paper';
 
-// onde sera recebido os dados do form do login
 const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-
   const handleLogin = () => {
-    //Onde ficara a logica  de autenticação do login ficara  aqui
-    navigation.navigate('Listagem',{
+    // Lógica de autenticação aqui
+    navigation.navigate('Buscar filme',{
       loggedIn:true,
     });
-   
+    
   };
 
-// Tela de login a ser retornada para o app.js
   return (
     <View style={styles.container}>
       <TextInput
@@ -40,22 +36,24 @@ const LoginScreen = ({ navigation }) => {
   );
 };
 
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
     paddingHorizontal: 20,
-    backgroundColor:"#A8D9CE"
+    backgroundColor:"#000000",
+    alignItems:'center'
   },
   input: {
+    width:'100%',
     marginBottom: 15,
   },
   button: {
     marginTop: 10,
-   backgroundColor:"#5E8C82"
+   backgroundColor:"#DBA506",
+   borderRadius:0,
+   width:'80%'
   },
 });
-
 
 export default LoginScreen;
